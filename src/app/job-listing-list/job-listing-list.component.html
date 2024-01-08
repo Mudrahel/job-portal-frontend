@@ -1,0 +1,10 @@
+<div>
+    <h2>Job Listings</h2>
+    <div *ngFor="let job of jobListings">
+        <a [routerLink]="['/job-listing/', job.id, { userId: job.userId }]">
+            <b>{{ job.title }}</b>
+        </a>
+        <p>{{ job.description }}</p>
+        <hr />
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div>
+    <h2>Job Listing Details</h2>
+
+    <div *ngIf="jobListing">
+        <label>ID:</label> {{ jobListing.id }}<br>
+        <label>Title:</label> {{ jobListing.title }}<br>
+        <label>Description:</label> {{ jobListing.description }}<br>
+        <label>User ID:</label> {{ jobListing.userId }}<br>
+    </div>
+
+    <button (click)="goBack()">Back</button>
+</div>

@@ -2,12 +2,16 @@
     <h2>Login</h2>
     <form (ngSubmit)="login()">
         <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
 
         <button type="submit">Login</button>
+        <button (click)="goToRegistration()">Register</button>
+
+        <!-- Display error message -->
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     </form>
-    <button (click)="goToRegistration()">Register</button>
+
 </div>

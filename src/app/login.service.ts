@@ -6,14 +6,12 @@ import { User } from './user';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-
-  private baseURL = "http://localhost:8080/api/v1/users"
+export class LoginService {
+  private baseURL = "http://localhost:8080/api/v1/login"
 
   constructor(private httClient: HttpClient) { }
 
-  createUser(user: User): Observable<Object> {
+  login(user: User): Observable<Object> {
     return this.httClient.post(`${this.baseURL}`, user);
   }
-
 }
