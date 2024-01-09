@@ -1,12 +1,12 @@
-<div>
+<div class="job-listing-details-container">
     <h2>Job Listing Details</h2>
 
     <div *ngIf="jobListing">
-        <label>ID:</label> {{ jobListing.id }}<br>
-        <label>Title:</label> {{ jobListing.title }}<br>
-        <label>Description:</label> {{ jobListing.description }}<br>
-        <label>User ID:</label> {{ jobListing.userId }}<br>
+        <label class="job-listing-details-label">ID:</label> {{ jobListing.id }}<br>
+        <label class="job-listing-details-label">Title:</label> {{ jobListing.title }}<br>
+        <label class="job-listing-details-label">Description:</label> {{ jobListing.description }}<br>
+        <label class="job-listing-details-label">User ID:</label> {{ jobListing.userId }}<br>
     </div>
 
-    <button (click)="goBack()">Back</button>
+    <button class="btn btn-secondary center-button" (click)="goBack()">Back</button>
 </div>

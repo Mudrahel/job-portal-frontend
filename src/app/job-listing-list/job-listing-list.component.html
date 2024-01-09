@@ -1,10 +1,14 @@
-<div>
-    <h2>Job Listings</h2>
-    <div *ngFor="let job of jobListings">
-        <a [routerLink]="['/job-listing/', job.id, { userId: job.userId }]">
-            <b>{{ job.title }}</b>
-        </a>
-        <p>{{ job.description }}</p>
-        <hr />
+<div class="container job-listings-container">
+    <div class="logout-button">
+      <button class="btn btn-secondary" (click)="logout()">Log out</button>
     </div>
-</div>
+  
+    <h2>Job Listings</h2>
+    <div *ngFor="let job of jobListings" class="job-listing">
+      <a [routerLink]="['/job-listing/', job.id, { userId: job.userId }]">
+        <b>{{ job.title }}</b>
+      </a>
+      <p>{{ job.description }}</p>
+      <hr />
+    </div>
+  </div>

@@ -1,13 +1,19 @@
-<div>
-    <h2>Register new User</h2>
+<div class="container registration-container">
+    <div class="login-form">
+    <h2 class="page-title">Register new User</h2>
     <form (ngSubmit)="onSubmit()">
-        <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="form-control" [(ngModel)]="user.username" name="username" required>
+        </div>
 
-        <label for="password">Password:</label>
-        <input type="text" id="password" [(ngModel)]="user.password" name="password" required>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" id="password" class="form-control" [(ngModel)]="user.password" name="password" required>
+        </div>
 
-        <button type="submit">Register</button>
-        <button type="button" (click)="goToLogin()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-secondary" (click)="goToLogin()">Cancel</button>
     </form>
+    </div>
 </div>

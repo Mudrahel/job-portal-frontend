@@ -23,4 +23,8 @@ export class JobListingListComponent {
       this.jobListings = data;
     });
   }
+
+  logout(){
+    this.router.navigate(['/login']);
+  }
 }

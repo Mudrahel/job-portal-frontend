@@ -1,17 +1,26 @@
-<div>
-    <h2>Login</h2>
-    <form (ngSubmit)="login()">
-        <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+<div class="login-container">
+    <div class="login-form">
+        <h2 class="page-title">Login</h2>
+        <form (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="form-control" [(ngModel)]="user.username" name="username"
+                    required>
+            </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" [(ngModel)]="user.password" name="password"
+                    required>
+            </div>
 
-        <button type="submit">Login</button>
-        <button (click)="goToRegistration()">Register</button>
+            <button type="submit" class="btn btn-primary center-button">Login</button>
 
-        <!-- Display error message -->
-        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-    </form>
-
+            <div class="logout-button">
+                <button type="button" class="btn btn-secondary" (click)="goToRegistration()">Register</button>
+            </div>
+            <!-- Display error message -->
+            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        </form>
+    </div>
 </div>
